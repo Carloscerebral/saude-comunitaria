@@ -1,0 +1,17 @@
+{
+  "name": "saude-comunitaria",
+  "version": "1.0.0",
+  "description": "Sistema de Monitoramento de Sa\u00fade Comunit\u00e1ria - ODS 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Carlos Augusto Cabral Gomes",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "mysql2": "^3.9.4"
+  }
+}

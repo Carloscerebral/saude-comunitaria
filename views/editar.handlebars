@@ -1,0 +1,10 @@
+<h2>Editar Serviço</h2>
+<form action="/editar/{{servico.id}}" method="POST">
+  <input type="text" name="nome" value="{{servico.nome}}" required><br>
+  <input type="text" name="valor" value="{{servico.valor}}" required><br>
+  <textarea name="descricao" required>{{servico.descricao}}</textarea><br>
+  <input type="text" name="fornecedor" value="{{servico.fornecedor}}" required><br>
+  <input type="email" name="email" value="{{servico.email}}" required><br>
+  <input type="tel" name="telefone" value="{{servico.telefone}}" required><br>
+  <button type="submit">Atualizar</button>
+</form>

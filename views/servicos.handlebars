@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Sistema de Monitoramento de Saúde Comunitária</h1>
+</header>
+
+<nav>
+  <a href="/">Home</a>
+  <a href="/sobre">Sobre</a>
+  <a href="/cadastro">Cadastrar Serviço</a>
+  <a href="/servicos">Ver Serviços</a>
+</nav>
+
+<h2 style="text-align: center;">Serviços Cadastrados</h2>
+
+<div style="max-width: 700px; margin: 0 auto;">
+  {{#each servicos}}
+    <div class="card" style="margin-bottom: 20px; padding: 15px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); background: white;">
+      <h3 style="text-align: center;">{{nome}}</h3>
+      <p><strong>Descrição:</strong> {{descricao}}</p>
+      <p><strong>Valor:</strong> R$ {{valor}}</p>
+      <p><strong>Fornecedor:</strong> {{fornecedor}}</p>
+      <p><strong>Email:</strong> {{email}}</p>
+      <p><strong>Telefone:</strong> {{telefone}}</p>
+      <form action="/deletar/{{id}}" method="POST" style="display:inline;">
+        <button style="background-color: red; color: white; border: none; padding: 8px 12px; margin-right: 10px; cursor: pointer;">Deletar</button>
+      </form>
+      <a href="/editar/{{id}}">
+        <button style="background-color: orange; color: white; border: none; padding: 8px 12px; cursor: pointer;">Editar</button>
+      </a>
+    </div>
+  {{/each}}
+</div>
